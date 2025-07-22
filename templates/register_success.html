@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Successful</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; padding: 0; }
+        .container { max-width: 400px; margin: 60px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+        h1 { color: #28a745; }
+        .info { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful!</h1>
+        <div class="info">
+            <p>Name: <strong>{{ name }}</strong>!</p>
+            <p>Email: <strong>{{ email }}</strong> has been registered.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+            <a href="{% url 'send_newsletter' %}" style="background: #007bff; color: #fff; border: none; padding: 10px 24px; border-radius: 4px; cursor: pointer;">
+                Send emil
+            </a>
+    </div>
+</body>
+</html>

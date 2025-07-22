@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+  <h2>Register Recipient</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" name="email" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Recipient</button>
+            <a href="{% url 'send_newsletter' %}" class="btn btn-secondary">
+                Send emil
+            </a>
+  </form>
+
+  
+</div>
+{% endblock %}
